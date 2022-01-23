@@ -37,6 +37,11 @@
   }
 }
 
+.app-container {
+  margin: 10px;
+  height: 100vh;
+}
+
 .btn {
   background-color: #f5f5f5;
   border-color: transparent;

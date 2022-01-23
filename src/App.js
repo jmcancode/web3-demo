@@ -2,31 +2,38 @@ import logo from './logo.svg';
 import './App.css';
 // moralis
 import {useMoralis} from "react-moralis"
+import {Fragment} from 'react';
 
 function App() {
-  
-  const {authenticate, isAuthenticated, user, logout} = useMoralis()
+
+    const {authenticate, isAuthenticated, user, logout} = useMoralis()
 
     if (!isAuthenticated) {
-      return (
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-           <div>
-             <button className="btn" onClick={() => authenticate()}>Connect Wallet</button>
-             </div> 
-          </header>
-        </div>
-      );
+        return (
+            <div className="App">
+                <header className="App-header">
+                    <img src={logo} className="App-logo" alt="logo"/>
+                    <div>
+                        <button className="btn" onClick={() => authenticate()}>Connect Wallet</button>
+                    </div>
+                </header>
+            </div>
+        );
     }
 
     return (
-      <div className="app-container">
-        <h1>Welcome {user.get("username")}</h1>
-        <div>
-          <button className="btn" onClick={() => logout()}>Logout</button>
-        </div>
-      </div>
+        <Fragment>
+            <div className="app-container">
+                <section>
+                    <p>Welcome, {user.get("username")}</p>
+                </section>
+                <section>
+                    <div>
+                        <button className="btn" onClick={() => logout()}>Logout</button>
+                    </div>
+                </section>
+            </div>
+        </Fragment>
     )
 }
 
