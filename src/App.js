@@ -1,25 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+// moralis
+import {useMoralis} from "react-moralis"
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  
+  const {authenticate, isAuthenticated, user, logout} = useMoralis()
+
+    if (!isAuthenticated) {
+      return (
+        <div className="App">
+          <header className="App-header">
+            <img src={logo} className="App-logo" alt="logo" />
+           <div>
+             <button className="btn" onClick={() => authenticate()}>Connect Wallet</button>
+             </div> 
+          </header>
+        </div>
+      );
+    }
+
+    return (
+      <div className="app-container">
+        <h1>Welcome {user.get("username")}</h1>
+        <div>
+          <button className="btn" onClick={() => logout()}>Logout</button>
+        </div>
+      </div>
+    )
 }
 
 export default App;
