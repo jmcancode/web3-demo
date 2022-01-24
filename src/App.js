@@ -24,13 +24,26 @@ function App() {
     return (
         <Fragment>
             <div className="app-container">
-                <section>
-                    <p>Welcome, {user.get("username")}</p>
-                </section>
-                <section>
-                    <div>
-                        <button className="btn" onClick={() => logout()}>Logout</button>
+                <section id="#hero">
+                    <div className="welcome-container">
+                        <div>
+                            <p className="welcome">Welcome, {user.get("username")}</p>
+                        </div>
+                        <div>
+                            <div>
+                                <button onClick={() => logout()}>Logout</button>
+                            </div>
+                        </div>
                     </div>
+                </section>
+                <section id="#eth" className="eth-container">
+                    <p>Send Ethereum</p>
+                </section>
+                <section id="#verify" className="verify-container">
+                    <p>Verify Contract</p>
+                </section>
+                <section id="#mint" className="mint-container">
+                    <p>Mint NFTS</p>
                 </section>
             </div>
         </Fragment>
