@@ -6,7 +6,7 @@ git clone https://github.com/jmcancode/web3-demo.git
 ```
 # Install Dependencies
 ```
-npm install
+yarn install
 ```
 # Web3 decentralized backend
-You'll need a Moralis account to this part. In the .env file add your appId & server url.
+You'll need a Moralis account to this part. In the .env file add your appId & server url to connect your server.

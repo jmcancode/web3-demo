@@ -14,6 +14,9 @@
 
 .App-header {
     background-color: #282c34;
+    background-image: url("https://images.unsplash.com/photo-1634632109601-bcfd0a649a07?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -26,6 +29,7 @@
 .App-link {
     color: #61dafb;
 }
+
 @keyframes App-logo-spin {
     from {
         transform: rotate(0deg);
@@ -38,35 +42,24 @@
 .app-container {
     
     height: 100vh;
-    background-color: #282c34;
+    background-color: #f5f5f5;
 }
 
-.btn {
-    background-color: #f5f5f5;
-    border-color: transparent;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.btn:hover {
-    background-color: #171717;
-    color: #f5f5f5;
-    border-color: transparent;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 section {
     height: 100vh;
 }
 
 .welcome {
-    color: #f5f5f5;
+    color: #282c34;
+    font-size: 3em;
+    text-transform: uppercase;
 }
 
 .welcome-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     height:100%;
 }
@@ -76,6 +69,14 @@ section {
     justify-content: center;
     align-items: center;
     height:100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 .verify-container {
     display: flex;
@@ -90,5 +91,37 @@ section {
     justify-content: center;
     align-items: center;
     height:100%;
+}
+
+.btn-group{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.modal-body {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.login-link {
+    text-decoration: none;
+    color: #171717;
+}
+.login-link:hover {
+    text-decoration: line-through;
+    color: #83236d;
+}
+
+.scroll {
+    background-color: #fff;
+    border-radius: 180px;
+    padding: 10px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
