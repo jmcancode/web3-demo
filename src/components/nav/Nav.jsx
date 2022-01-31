@@ -5,46 +5,47 @@ import "./Nav.css";
 import {useMoralis} from "react-moralis"
 // logo
 import logo from "../../assets/logo.png"
+// react-router-dom
+import {useNavigate} from 'react-router-dom'
 
 function Navigation() {
-    const {logout, user} = useMoralis()
+    const {user} = useMoralis()
+    let navigate = useNavigate();
     return (
         <Fragment>
-            <div className="nav-bar">
+            <nav className="logo-nav">
+                <img src={logo} alt="logo" width={100} height={100} className="logo"/>
+            </nav>
+            <header id="nav-bar" className="nav-bar">
                 <nav>
-                    <img
-                        src={logo}
-                        alt="logo"
-                        width={100}
-                        height={100}
-                        style={{
-                        height: '50px'
-                    }}/>
-                </nav>
-                <nav >
                     <ul>
-                        <li>
-                            Home
+                        <li onClick={() => {navigate("/")}}>
+                            Mint
                         </li>
                         <li>
-                            Send Eth
+                            Road Map
                         </li>
                         <li>
-                            Transfer NFTs
+                            Gallery
+                        </li>
+                        <li>
+                            Members
                         </li>
                     </ul>
                 </nav>
                 <nav>
                     <ul>
-                        <li onClick={() => logout()}>
-                            Logout
-                        </li>
-                        <small className="user-info">
+                       
+                        <small
+                            onClick={() => {
+                            navigate("/account")
+                        }}
+                            className="user-info">
                             {user.get("username")}
                         </small>
                     </ul>
                 </nav>
-            </div>
+            </header>
         </Fragment>
     );
 }

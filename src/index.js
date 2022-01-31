@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 // moralis
 import{MoralisProvider} from 'react-moralis'
-
 const appId = "saSzi0eCiyxeX1LFINesPiUAv49gFTNYoaIWrdav"
 const serverUrl= "https://txeh54socvkc.usemoralis.com:2053/server"
 
