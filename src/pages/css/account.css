@@ -6,3 +6,10 @@
     height: 100vh;
     padding: 5% 50px ;
 }
+
+.nav-link {
+    color: #171717;
+}
+.nav-link:hover {
+    color: #cdbb8d;
+}

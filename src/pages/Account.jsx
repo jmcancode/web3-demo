@@ -22,16 +22,16 @@ function Account() {
                 <div className="account-container">
                     <Tabs defaultActiveKey="nfts" id="uncontrolled-tab-example" className="mb-3">
                         <Tab eventKey="wallet" title="Wallet">
-                            Lorem ipsum dolor sit amet, consectetur adip.
+                            Wallet Balance will be shown here.
                         </Tab>
                         <Tab eventKey="nfts" title="NFTs">
-                            Lorem ipsum dolor sit amet, consectetur adip.
+                            List all owned NFT's
                         </Tab>
                         <Tab eventKey="sell" title="Sell">
-                            Lorem ipsum dolor sit amet, consectetur adip.
+                            Sell your NFT's
                         </Tab>
                         <Tab eventKey="account" title="Account">
-                            Lorem ipsum dolor sit amet, consectetur adip.
+                            Account information.
                         </Tab>
                     </Tabs>
                 </div>

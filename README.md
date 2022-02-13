@@ -1,12 +1,15 @@
-# Web3 - Demo Docs
+# Basic Sample Hardhat Project
 
-# Fork or clone repositlry
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
 ```
-git clone https://github.com/jmcancode/web3-demo.git
-```
-# Install Dependencies
-```
-yarn install
-```
-# Web3 decentralized backend
-You'll need a Moralis account to this part. In the .env file add your appId & server url to connect your server.

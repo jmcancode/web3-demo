@@ -20,6 +20,9 @@ function Navigation() {
                 <nav>
                     <ul>
                         <li onClick={() => {navigate("/")}}>
+                            Home
+                        </li>
+                        <li>
                             Mint
                         </li>
                         <li>
@@ -29,7 +32,7 @@ function Navigation() {
                             Gallery
                         </li>
                         <li>
-                            Members
+                            Holders
                         </li>
                     </ul>
                 </nav>
